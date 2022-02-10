@@ -21,14 +21,17 @@ name:{
   
   },
 
-  age: Number,
+  
+age: Number,
 
 favouriteFoods: [String]
 
 
 });
 
-const Person = mongoose.model("Person",personSchema);
+const Person = mongoose.model('Person',personSchema);
+
+
 
 const createAndSavePerson = (done) => {
   done(null /*, data*/);
