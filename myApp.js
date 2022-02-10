@@ -22,9 +22,9 @@ name:{
   },
 
   
-age: Number,
+age:{type:Number},
 
-favouriteFoods: [String]
+favouriteFoods:{type:[String]}
 
 
 });
