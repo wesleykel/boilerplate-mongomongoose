@@ -10,26 +10,14 @@ db.once('open', function() {
   console.log("connected to db")
 });
 
-
-
-
-const  personSchema = new Schema({
-
-name:{
- type:String,
- required: true
-  
-  },
-
-  
-age:{type:Number},
-
-favouriteFoods:{type:[String]}
-
-
+const personSchema = new Schema({
+  name: { type: String, required: true },
+  age: Number,
+  favoriteFoods: [String]
 });
 
-const Person = mongoose.model('Person',personSchema);
+
+const Person = mongoose.model("Person", personSchema);
 
 
 
