@@ -115,9 +115,9 @@ Person.remove({name:nameToRemove},(err, response)=>{
 const queryChain = (done) => {
   const foodToSearch = "burrito";
 Person.find({favoriteFoods:foodToSearch})
-.sort({name: 1})
-.limit(2)
-.select({ name:1, favoriteFoods:1})
+.sort({name: 1})//1 is  to sort ascending 
+.limit(2)//limit the results  to 2 records
+.select({ name:1, favoriteFoods:1})//select only the ones you want or the the records you don't want , if your selecting using 1 then only the fields with 1 will be selected
 .exec(function(err,data){
  if(err)return console.log(err);
     done(null ,data);
