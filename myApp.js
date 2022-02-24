@@ -114,9 +114,17 @@ Person.remove({name:nameToRemove},(err, response)=>{
 
 const queryChain = (done) => {
   const foodToSearch = "burrito";
+Person.find({favoriteFoods:foodToSearch}
+.sort({name: 1})
+.limit(2)
+.select(-age)
+.exec(function(err,data){
+ if(err)return console.log(err);
+    done(null ,data);
+})
+)}
 
-  done(null /*, data*/);
-};
+
 
 /** **Well Done !!**
 /* You completed these challenges, let's go celebrate !
